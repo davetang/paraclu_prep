@@ -23,7 +23,7 @@ echo Preparing count files
 parallel --verbose "count.pl {} ${my_pre}_sum_simp.bed > {.}.count" ::: $my_bam_dir/*.temp
 
 echo Tallying count files
-tally.pl ${my_pre}_sum_simp.bed . > ${my_pre}_sum_simp.tally
+tally.pl ${my_pre}_sum_simp.bed $my_bam_dir > ${my_pre}_sum_simp.tally
 
 echo Obtaining peaks
 peak.pl ${my_pre}_sum.input ${my_pre}_sum_simp.bed > ${my_pre}_sum_simp_peak.tsv
