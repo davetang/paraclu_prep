@@ -1,0 +1,7 @@
+bam
+paraclu-9*
+*.input
+*.output
+*.bed
+*.tally
+*.tsv
